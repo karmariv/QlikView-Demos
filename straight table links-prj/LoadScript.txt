@@ -1,0 +1,18 @@
+﻿///$tab Data
+/******************************************
+ Set variables using in this demo
+*******************************************/
+SET vBlogURL = 'https://karla-mrivas.blogspot.com/';
+
+/******************************************
+ Load data
+*******************************************/
+Articles:
+LOAD * INLINE [
+    Post ID, Title, Summary
+    2016/07/qlikview-quick-tip-2-fixed-colors-in.html, QlikView: Quick tip #2 - Fixed colors in charts, This article  explains how to set a fix color patter for a chart
+    2016/07/qlikview-quick-tip-1-showhide-elements.html, QlikView: Quick tip #1 - Show/hide elements using text objects, Demonstrate how to show/hide using text objects and actions
+    2016/07/qlikview-custom-calendar-generator.html, QlikView: Custom Calendar Generator, This application can be used to generate Calendar QVDs that includes holidays and fiscal year defined by users
+    2016/04/qlikview-creating-trend-chart-for-stock.html, QlikView: Creating a trend chart for stock data, See how to create a trend chart to display stock data accros time
+];
+
