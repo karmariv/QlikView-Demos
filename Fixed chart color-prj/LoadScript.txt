@@ -1,0 +1,37 @@
+﻿///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;($#,##0.00)';
+SET TimeFormat='hh:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff] TT';
+SET MonthNames='ene;feb;mar;abr;may;jun;jul;ago;sep;oct;nov;dic';
+SET DayNames='lun;mar;mié;jue;vie;sáb;dom';
+SET LongMonthNames='enero;febrero;marzo;abril;mayo;junio;julio;agosto;septiembre;octubre;noviembre;diciembre';
+SET LongDayNames='lunes;martes;miércoles;jueves;viernes;sábado;domingo';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='es-SV';
+
+LOAD
+	Dual(Date#(Month, 'MMM'), num(Date#(Month, 'MMM'))) as Month,
+	Category,
+	Cases;
+
+LOAD * INLINE [
+    Month, Category, Cases
+    Jan, Low, 30
+    Jan, High, 10
+    Jan, Medium, 50
+    Jan, Emergency, 5
+    Feb, Low, 29
+    Feb, Medium, 40
+    Feb, High, 7
+    Mar, Medium, 30
+    Mar, High, 8
+];
+
